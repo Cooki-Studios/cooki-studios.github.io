@@ -1,2 +1,2 @@
 # cooki-studios.github.io
-=Cooki on the Web=
+[Cooki on the Web]
