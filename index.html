@@ -32,18 +32,18 @@ li a:hover {
 .active {
   background-color: #ffa500;
 }
-.hidden {
-  color: #fff;
-}
-.hidden:hover {
-  color: #000;
-}
-img#hiddenImg {
+    
+img#hide {
   opacity: 0;
+}
+    
+img#show {
+    opacity: 1;
+}
 </style>
 <script>
-    function show???() {
-        ("hiddenImg").css("opacity","1");
+    function showImg() {
+        getElementById("hide").id = "show";
     }
 </script>
 <head>
@@ -56,6 +56,6 @@ img#hiddenImg {
     <h1>Warning!</h1>
     <h3>This website is still in development so there is literally nothing you can do.</h6>
     <h6 class="hidden">This website may contain hidden messages.</h6>
-    <button onclick="show???()"></button>
-    <img id="hiddenImg" src="img/???.png"></img>
+    <button onclick="showImg()"></button>
+    <img id="hide" src="img/???.png"></img>
 </body>
