@@ -46,10 +46,14 @@ h6.hidden:hover {
 }
 </style>
 <script>
-    function showImg() {
-        getElementById("hide").id = "show";
-    }
-</script>
+        function show() {
+            document.getElementById('image')
+                    .style.display = "block";
+ 
+            document.getElementById('btnID')
+                    .style.display = "none";
+        }
+    </script>
 <head>
     <ul>
         <li><a class="active">Home</a></li>
@@ -61,5 +65,5 @@ h6.hidden:hover {
     <h1>Warning!</h1>
     <h3>This website is still in development so there is literally nothing you can do.</h6>
     <h6 class="hidden">This website may contain hidden messages.</h6>
-    <button onclick="showImg()"></button>
+    <button onclick="showImg()" id="sus"></button>
 </body>
