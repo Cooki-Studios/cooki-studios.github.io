@@ -29,11 +29,11 @@ li a:hover {
   background-color: #111;
 }
 
-h6#hidden {
+h6.hidden {
   color: #fff;
 }
 
-h6#hidden:hover {
+h6.hidden:hover {
   color: #000;
 }
     
@@ -41,12 +41,8 @@ h6#hidden:hover {
   background-color: #ffa500;
 }
     
-img#hide {
-  opacity: 0;
-}
-    
-img#show {
-    opacity: 1;
+#image {
+  display: none;
 }
 </style>
 <script>
@@ -66,5 +62,4 @@ img#show {
     <h3>This website is still in development so there is literally nothing you can do.</h6>
     <h6 class="hidden">This website may contain hidden messages.</h6>
     <button onclick="showImg()"></button>
-    <img id="hide" src="img/???.png"></img>
 </body>
