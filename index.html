@@ -32,8 +32,12 @@ li a:hover {
 h6.hidden {
   opacity: 0;
 }
+    
+h6.hoverhidden {
+  opacity: 0;
+}
 
-h6.hidden:hover {
+h6.hoverhidden:hover {
   opacity: 100;
 }
     
@@ -50,6 +54,8 @@ h6.hidden:hover {
             document.getElementById('image').style.display = "block";
  
             document.getElementById('sus').style.display = "none";
+            
+            document.getElementById('hidden').style.opacity = "100";
         }
     </script>
 <head>
@@ -62,7 +68,7 @@ h6.hidden:hover {
 <body>
     <h1>Warning!</h1>
     <h3>This website is still in development so there is literally nothing you can do.</h6>
-    <h6 class="hidden">This website may contain hidden messages.</h6>
+    <h6 class="hoverhidden">This website may contain hidden messages.</h6>
     
     <button onclick="showImg()" id="sus"></button>
     <h6 class="hidden">                                 ⬛⬛⬛⬛⬛⬛<br>
