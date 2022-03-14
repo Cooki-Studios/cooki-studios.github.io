@@ -1,2 +1,2 @@
-# cooki-studios.github.io
-_Cooki on the Web_
+# [Cooki Studios](https://cooki-studios.github.io)
+>_***Cooki on the Web***_
