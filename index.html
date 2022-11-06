@@ -40,6 +40,10 @@
     background-color: #111;
   }
 
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+
   h6.amogus {
     opacity: 0;
   }
@@ -54,19 +58,23 @@
       
   .active {
     background-color: #ffa500;
+    user-select: none;
   }
   
   button.sus {
-    color: #fff;
+    background-color: #fff;
+    border: 0px;
   }
+
+  button.new {   
+    background-image: (href="img/Artboard 1Settings.svg");
+  }   
 </style>
 <script>
         function showMessage() {
-          document.getElementById('sus')
-          .style.display = "none";
+          document.getElementById('sus').style.display='none';
                     
-          document.getElementById('amogus')
-          .style.display = "none";
+          document.getElementById('amogus').style.display='block';
         }
     </script>
 <head>
@@ -77,6 +85,7 @@
         <li><a class="active">Home</a></li>
         <li><a href="games">Games</a></li>
         <li><a href="tiles">Tiles</a></li>
+        <li class="new" style="float:right"><a href="javascript:whats-new"></a></li>
     </ul>
 </head>
 <body>
@@ -84,5 +93,5 @@
     <h3>This website is still in development so there is literally nothing you can do.</h6>
     <h6 class="hoverhidden">This website may contain hidden messages.</h6>
     <button onclick="showMessage()" id="sus"></button>
-    <h6 class="amogus">NO. YOU CLICKED IT. DON'T GO TO AMOGUS.</h6>
+    <h6 class="amogus">NO. YOU CLICKED IT. DON'T GO TO THE BOTTOM OF "What's New?"</h6>
 </body>
