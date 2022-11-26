@@ -9,6 +9,13 @@
     -ms-user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  body::-webkit-scrollbar {
+    display: none;
   }
 
   h1, h2, h3, h4, h5, h6, ul, li, li a p, a {
@@ -66,9 +73,18 @@
   section {
     display: flex;
     flex-direction: column;
+    align-content: center;
     align-items: center;
-    min-height: 400px;
-    padding: 100px 20vw;
+  }
+
+  #section1 {
+    padding-top: 25vh;
+    padding-bottom: 75vh;
+  }
+
+  #section2 {
+    padding-top: 50vh;
+    padding-bottom: 50vh;
   }
 </style>
 <head>
@@ -82,13 +98,16 @@
         <li><a href="wallpapers?bg-color=151515&fill-style=ffa500">Wallpapers (PRE-ALPHA)</a></li>
         <li style="float:right; cursor: pointer;"><a id="newImg">null</a></li>
     </ul>
+    <script>
+      
+    </script>
 </head>
 <body>
-  <section style="background-image: url('img/LayeredWaves.svg'); background-size: cover;">
+  <section id="section1" style="background: url(img/LayeredWaves.svg) no-repeat center center; background-size: cover; height: 100%; overflow: hidden;">
     <h1>Warning!</h1>
-    <h3>This website is still in development so there is literally nothing you can do.</h3>
+    <h3>This website is still in development.</h3>
   </section>
-  <section style="background-color: #ffa500;">
+  <section id="section2" style="background-color: #ffa500;">
     <h1>Great things are yet to come</h1>
     <a href="404">Check out beta versions</a>
   </section>
