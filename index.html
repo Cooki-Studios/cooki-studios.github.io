@@ -4,13 +4,21 @@
 <style>
   body {
     background-color: #151515;
-    background-image: url("img/LayeredWaves.svg");
-    background-size: cover;
+    margin: 0px;
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
   }
 
-  h1, h2, h3, h4, h5, h6, ul, li, li a {
+  h1, h2, h3, h4, h5, h6, ul, li, li a p, a {
     font-family: 'Quicksand', sans-serif;
     color:whitesmoke;
+    text-decoration: none;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    cursor: text;
   }
     
   ul {
@@ -33,66 +41,55 @@
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
-  }
-
-  li a:hover {
-    background-color: #111;
   }
 
   li a:hover:not(.active) {
     background-color: #111;
   }
 
-  h6.amogus {
-    opacity: 0;
-  }
-      
-  h6.hoverhidden {
-    opacity: 0;
-  }
-
-  h6.hoverhidden:hover {
-    opacity: 100;
+  a:hover:not(.active) {
+    color: darkgray;
   }
       
   .active {
     background-color: #ffa500;
-    user-select: none;
-  }
-  
-  button.sus {
-    background-color: #fff;
-    border: 0px;
+  }  
+
+  #newImg {
+    background-image: url("img/CookiWeb.png");
+    background-size: 2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: transparent;
   }
 
-  button.new {   
-    background-image: url('img/Settings.svg');
-  }   
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding: 100px 20vw;
+  }
 </style>
-<script>
-        function showMessage() {
-          document.getElementById('sus').style.display='none';
-                    
-          document.getElementById('amogus').style.display='block';
-        }
-    </script>
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <ul>
+    <ul id=""navbar>
         <li><a class="active">Home</a></li>
         <li><a href="games">Games</a></li>
         <li><a href="tiles">Tiles</a></li>
         <li><a href="wallpapers?bg-color=151515&fill-style=ffa500">Wallpapers (PRE-ALPHA)</a></li>
-        <li class="new" style="float:right"><a href="javascript:whats-new"></a></li>
+        <li style="float:right; cursor: pointer;"><a id="newImg">null</a></li>
     </ul>
 </head>
 <body>
-  <h1>Warning!</h1>
-  <h3>This website is still in development so there is literally nothing you can do.</h3>
-  <h6 class="hoverhidden">This website may contain hidden messages.</h6>
-  <button onclick="showMessage()" id="sus"></button>
-  <h6 class="amogus">NO. YOU CLICKED IT. DON'T GO TO THE BOTTOM OF "What's New?"</h6>
+  <section style="background-image: url('img/LayeredWaves.svg'); background-size: cover;">
+    <h1>Warning!</h1>
+    <h3>This website is still in development so there is literally nothing you can do.</h3>
+  </section>
+  <section style="background-color: #ffa500;">
+    <h1>Great things are yet to come</h1>
+    <a href="404">Check out beta versions</a>
+  </section>
 </body>
