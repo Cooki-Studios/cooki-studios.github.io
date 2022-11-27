@@ -11,6 +11,14 @@
     -webkit-user-select: none;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    font-family: 'Quicksand', sans-serif;
+    color:whitesmoke;
+  }
+
+  .light-theme {
+    background-color: whitesmoke;
+    font-family: 'Quicksand', sans-serif;
+    color: #151515;
   }
 
   /* Hide scrollbar for Chrome, Safari and Opera */
@@ -18,10 +26,13 @@
     display: none;
   }
 
-  h1, h2, h3, h4, h5, h6, ul, li, li a p, a {
-    font-family: 'Quicksand', sans-serif;
-    color:whitesmoke;
+  h1, h2, h3, h4, h5, h6, ul, li, li a p {
     text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+    color:whitesmoke;
   }
 
   h1, h2, h3, h4, h5, h6, p {
@@ -86,8 +97,28 @@
     padding-top: 50vh;
     padding-bottom: 50vh;
   }
+
+  #toggleButton {
+    background-color: whitesmoke;
+    border: none;
+    color: #151515;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 1em;
+  }
+
+  #toggleButton.light-theme {
+    background-color: #151515;
+    color: whitesmoke;
+  }
 </style>
 <head>
+    <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -99,13 +130,28 @@
         <li style="float:right; cursor: pointer;"><a id="newImg">null</a></li>
     </ul>
     <script>
-      
+      var darkMode = true;
+
+      function toggleMode() {
+        darkMode = !darkMode
+
+        if (darkMode) {
+          document.getElementById("toggleButton").innerHTML = '<i class="fa-solid fa-sun"></i>';
+        } else {
+          document.getElementById("toggleButton").innerHTML = '<i class="fa-solid fa-moon"></i>';
+        }
+
+        document.body.classList.toggle("light-theme");
+        document.getElementById("toggleButton").classList.toggle("light-theme");
+      }
     </script>
+    <script src="https://kit.fontawesome.com/6c52ca2adf.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <section id="section1" style="background: url(img/LayeredWaves.svg) no-repeat center center; background-size: cover; height: 100%; overflow: hidden;">
     <h1>Warning!</h1>
     <h3>This website is still in development.</h3>
+    <button id="toggleButton" onclick="toggleMode()"><i class="fa-solid fa-sun"></i></button>
   </section>
   <section id="section2" style="background-color: #ffa500;">
     <h1>Great things are yet to come</h1>
