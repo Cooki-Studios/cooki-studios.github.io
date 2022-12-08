@@ -121,6 +121,8 @@
             <input id="file" type="file" onchange="loadFile(event)" accept="image/apng,image/bmp,image/gif,image/jpeg,image/pjpeg,image/png,image/svg+xml,image/tiff,image/webp,image/x-icon">
             <img src="img/icon.svg" id="output" width="200">
             <script>
+                var profile_pic = null;
+
                 var loadFile = function (event) {
                     var image = document.getElementById("output");
                     image.src = URL.createObjectURL(event.target.files[0]);
@@ -139,10 +141,12 @@
             </script>
         </div>
         <div id="login-input" style="margin-top: 1em;">
-            <input type="text" placeholder="Username" id="username"><br>
-            <input type="email" placeholder="Email" id="email"><br>
-            <input type="password" placeholder="Password" id="password"><br>
-            Tick this box if you want: <input type="checkbox" id="input-test">
+            <form>
+                <input type="text" placeholder="Username" id="username"><br>
+                <input type="email" placeholder="Email" id="email"><br>
+                <input type="password" placeholder="Password" id="password"><br>
+                Tick this box if you want: <input type="checkbox" id="input-test">
+            </form>
         </div>
         <br>
         <div id="login-submit">
@@ -208,7 +212,7 @@
                 // Create user data
                 if (profile_pic == null) {
                     var user_data = {
-                        profile_pic : "sus",
+                        profile_pic : "https://cooki-studios.github.io/img/icon.svg",
                         username : username,
                         email : email,
                         password : password,
@@ -217,7 +221,7 @@
                     }
                 } else {
                     var user_data = {
-                        profile_pic : "sus",
+                        profile_pic : profile_pic,
                         username : username,
                         email : email,
                         password : password,
