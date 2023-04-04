@@ -2,6 +2,10 @@
 <link rel="icon" href="img/CookiWeb.png" type="image/png">
 <title>Cooki Studios</title>
 <style>
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: #151515;
     margin: 0px;
@@ -49,13 +53,15 @@
     
   ul {
     list-style-type: none;
-    margin: 0;
+    margin: auto;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #33333390;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 0.5rem;
+    border-radius: 5rem;
+    width: 99%;
   }
 
   li {
@@ -63,31 +69,26 @@
   }
 
   li a {
-    display: block;
+    display: flex;
+    align-items: center;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    height: 2rem;
+    padding: 1rem;
+    opacity: 100%;
   }
 
   li a:hover:not(.active) {
-    background-color: #111;
+    opacity: 90%;
   }
 
   a:hover:not(.active) {
-    color: darkgray;
+    opacity: 90%;
   }
       
   .active {
     background-color: #ffa500;
   }  
-
-  #newImg {
-    background-image: url("img/CookiWeb.png");
-    background-size: 2em;
-    background-repeat: no-repeat;
-    background-position: center;
-    color: transparent;
-  }
 
   section {
     display: flex;
@@ -106,6 +107,11 @@
     padding-bottom: 50vh;
   }
 
+  #section3 {
+    padding-top: 25vh;
+    padding-bottom: 75vh;
+  }
+
   #toggleButton {
     background-color: whitesmoke;
     border: none;
@@ -115,14 +121,43 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    width: 5rem;
     cursor: pointer;
     border-radius: 1em;
+    opacity: 100%;
+  }
+
+  #toggleButton #modeIcon{
+    filter: brightness(0%);
+    cursor: pointer;
+  }
+
+  #toggleButton.light-theme #modeIcon{
+    filter: brightness(1000%);
   }
 
   #toggleButton.light-theme {
     background-color: #151515;
     color: whitesmoke;
+  }
+
+  #toggleButton:hover {
+    opacity: 90%;
+  }
+
+  #arrowTriangle {
+    fill: whitesmoke;
+    stroke: whitesmoke;
+    opacity: 100%;
+  }
+
+  #arrowTriangle.light-theme {
+    fill: #151515;
+    stroke: #151515;
+  }
+
+  #arrowTriangle:hover {
+    opacity: 90%;
   }
 </style>
 <head>
@@ -135,7 +170,6 @@
 
       gtag('config', 'G-92E1LN1KG9');
     </script>
-    <script type="text/javascript"> (function() { var css = document.createElement('link'); css.href = 'https://use.fontawesome.com/releases/v5.1.0/css/all.css'; css.rel = 'stylesheet'; css.type = 'text/css'; document.getElementsByTagName('head')[0].appendChild(css); })(); </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,7 +179,7 @@
         <li><a href="games">Games</a></li>
         <li><a href="tiles">Tiles</a></li>
         <li><a href="wallpapers?bg-color=151515&fill-style=ffa500">Wallpapers (PRE-ALPHA)</a></li>
-        <li style="float:right; cursor: pointer;"><a id="newImg"></a></li>
+        <li style="float:right; cursor: pointer;"><a href="tiles/2d/whats-new"><img src="img/WhatsNew.svg" style="margin: 0; padding:0; height: 2rem;"></a></li>
     </ul>
     <script>
       var darkMode = true;
@@ -154,25 +188,52 @@
         darkMode = !darkMode
 
         if (darkMode) {
-          document.getElementById("toggleButton").innerHTML = '<i class="fa-solid fa-sun"></i>';
+          document.getElementById("modeIcon").innerText = '☀️';
         } else {
-          document.getElementById("toggleButton").innerHTML = '<i class="fa-solid fa-moon"></i>';
+          document.getElementById("modeIcon").innerText = '🌙';
         }
 
         document.body.classList.toggle("light-theme");
         document.getElementById("toggleButton").classList.toggle("light-theme");
+        document.getElementById("arrowTriangle").classList.toggle("light-theme");
       }
     </script>
-    <script src="https://kit.fontawesome.com/6c52ca2adf.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <section id="section1" style="background: url(img/LayeredWaves.svg) no-repeat center center; background-size: cover; height: 100%; overflow: hidden;">
     <h1>Warning!</h1>
     <h3>This website is still in development.</h3>
-    <button id="toggleButton" onclick="toggleMode()"><i class="fa-solid fa-sun"></i></button>
+    <button id="toggleButton" onclick="toggleMode()"><p id="modeIcon">☀️</p></button>
+    <a href="#section2" style="position: relative; top: 10rem;">
+      <svg width='49.328125px' height='52.400390625px' direction='ltr' xmlns='http://www.w3.org/2000/svg' version='1.1'>
+        <g fill-rule='nonzero' transform='scale(1,-1) translate(0,-52.400390625)'>
+        <path id="arrowTriangle" fill='white' stroke='white' fill-opacity='1.0' stroke-width='1.0' d='
+            M 24.6640625,5.37109375
+            C 36.115234375,5.37109375 45.482421875,14.73828125 45.482421875,26.2109375
+            C 45.482421875,37.662109375 36.115234375,47.029296875 24.6640625,47.029296875
+            C 13.212890625,47.029296875 3.845703125,37.662109375 3.845703125,26.2109375
+            C 3.845703125,14.73828125 13.212890625,5.37109375 24.6640625,5.37109375
+            Z
+            M 32.828125,32.033203125
+            C 33.55859375,32.033203125 33.9453125,31.1953125 33.494140625,30.486328125
+            L 25.65234375,17.509765625
+            C 25.1796875,16.779296875 24.234375,16.779296875 23.76171875,17.509765625
+            L 15.833984375,30.486328125
+            C 15.404296875,31.1953125 15.76953125,32.033203125 16.521484375,32.033203125
+            Z
+        ' />
+        </g>
+        </svg>
+    </a>
   </section>
   <section id="section2" style="background-color: #ffa500;">
     <h1>Great things are yet to come</h1>
     <a href="tiles/2d/optimised">Why not try out Tiles (Optimised)?</a>
   </section>
+  <section id="section3" style="background: url(img/LayeredPeaks.svg) no-repeat center center; background-size: cover; height: 100%; overflow: hidden;">
+    
+  </section>
+  <footer>
+    <p>Cooki Studios</p>
+  </footer>
 </body>
