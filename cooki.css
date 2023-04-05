@@ -55,6 +55,7 @@ html {
     background-color: #33333390;
     position: -webkit-sticky;
     position: sticky;
+    filter: drop-shadow(0 0 0.75rem black);
     top: 0.5rem;
     border-radius: 5rem;
     width: 99%;
@@ -82,11 +83,24 @@ html {
   }
 
   li a:hover:not(.active) {
-    opacity: 90%;
+    opacity: 75%;
   }
 
   a:hover:not(.active) {
-    opacity: 90%;
+    opacity: 75%;
+  }
+
+  .dropElement {
+    position: relative;
+    top: 1rem;
+  }
+
+  a.dropdown .dropElement {
+    display: none;
+  }
+
+  a.dropdown:hover .dropElement {
+    display: block;
   }
       
   .active {
