@@ -78,4 +78,5 @@ addNavLink("Games", false, false, false, "games");
 addNavLink("Tiles", false, false, false, "tiles");
 addNavLink("Wallpapers (PRE-ALPHA)", false, false, false, "wallpapers?bg-color=151515&fill-style=ffa500");
 addNavLink(false, false, true, "https://cooki-studios.github.io/img/WhatsNew.svg", "tiles/2d/whats-new");
+addNavLink("Random Stuff", false, true, false, "random-stuff");
 document.body.appendChild(nav);
