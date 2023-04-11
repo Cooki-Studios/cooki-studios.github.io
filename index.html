@@ -39,6 +39,15 @@
   </head>
   <body>
     <script src="navbar.js"></script>
+    <script>
+      addNavLink("Home", true, false, false);
+      addNavLink("Games", false, false, false, "games");
+      addNavLink("Tiles", false, false, false, "tiles");
+      addNavLink("Wallpapers (PRE-ALPHA)", false, false, false, "wallpapers?bg-color=151515&fill-style=ffa500");
+      addNavLink(false, false, true, "https://cooki-studios.github.io/img/WhatsNew.svg", "tiles/2d/whats-new");
+      addNavLink("Random Stuff", false, false, false, "random-stuff");
+      document.body.appendChild(nav);
+    </script>
     <section id="section1" style="background: url(img/LayeredWaves.svg) no-repeat center center; background-size: cover; height: 100%; overflow: hidden;">
       <h1>Warning!</h1>
       <h3>This website is still in development.</h3>
