@@ -51,7 +51,7 @@ html {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    overflow: hidden;
+    overflow: scroll;
     background-color: #33333390;
     position: -webkit-sticky;
     position: sticky;
