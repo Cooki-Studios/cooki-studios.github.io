@@ -51,7 +51,8 @@ html {
     list-style-type: none;
     margin: auto;
     padding: 0;
-    overflow: scroll;
+    overflow: hidden;
+    overflow-x: scroll;
     background-color: #33333390;
     position: -webkit-sticky;
     position: sticky;
