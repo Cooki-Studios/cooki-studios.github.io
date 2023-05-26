@@ -1,174 +1,179 @@
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
-  body {
-    background-color: #151515;
-    margin: 0;
-    user-select: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-    color:whitesmoke;
-  }
+body {
+  background-color: #151515;
+  margin: 0;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  color:whitesmoke;
+}
 
-  .light-theme {
-    background-color: whitesmoke;
-    color: #151515;
-  }
+.light {
+  background-color: whitesmoke;
+  color: #151515;
+}
 
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  body::-webkit-scrollbar {
-    display: none;
-  }
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Rubik', sans-serif;
-    font-weight: 600;
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 600;
+}
 
-  p, ul, li, a {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-  }
+p, ul, li, a {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
 
-  h1, h2, h3, h4, h5, h6, ul, li, li a p {
-    text-decoration: none;
-  }
+h1, h2, h3, h4, h5, h6, ul, li, li a p {
+  text-decoration: none;
+}
 
-  a {
-    text-decoration: none;
-    color:whitesmoke;
-  }
+a {
+  text-decoration: none;
+  color:whitesmoke;
+}
 
-  h1, h2, h3, h4, h5, h6, p {
-    cursor: text;
-  }
+h1, h2, h3, h4, h5, h6, p {
+  cursor: text;
+}
+  
+ul {
+  list-style-type: none;
+  margin: auto;
+  padding: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  background-color: #33333390;
+  position: -webkit-sticky;
+  position: sticky;
+  filter: drop-shadow(0 0 0.75rem black);
+  top: 0.5rem;
+  border-radius: 5rem;
+  width: 99%;
+  z-index: 1;
+  max-height: 7.5vmax;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-align: center;
+  height: 2rem;
+  padding: 1rem;
+  opacity: 100%;
+}
+
+li a:hover:not(.active) {
+  opacity: 75%;
+}
+
+a:hover:not(.active) {
+  opacity: 75%;
+}
+
+.dropElement {
+  position: relative;
+  top: 1rem;
+}
+
+a.dropdown .dropElement {
+  display: none;
+}
+
+a.dropdown:hover .dropElement {
+  display: block;
+}
     
-  ul {
-    list-style-type: none;
-    margin: auto;
-    padding: 0;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    background-color: #33333390;
-    position: -webkit-sticky;
-    position: sticky;
-    filter: drop-shadow(0 0 0.75rem black);
-    top: 0.5rem;
-    border-radius: 5rem;
-    width: 99%;
-    z-index: 1;
-    max-height: 7.5vmax;
-  }
+.active {
+  background-color: #ffa500;
+}  
 
-  li {
-    float: left;
-  }
+section {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
 
-  li a {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-align: center;
-    height: 2rem;
-    padding: 1rem;
-    opacity: 100%;
-  }
+#section1 {
+  padding-top: 25vh;
+  padding-bottom: 75vh;
+}
 
-  li a:hover:not(.active) {
-    opacity: 75%;
-  }
+#section2 {
+  padding-top: 50vh;
+  padding-bottom: 50vh;
+}
 
-  a:hover:not(.active) {
-    opacity: 75%;
-  }
+#section3 {
+  padding-top: 25vh;
+  padding-bottom: 75vh;
+}
 
-  .dropElement {
-    position: relative;
-    top: 1rem;
-  }
+#toggleButton {
+  background-color: whitesmoke;
+  border: none;
+  color: #151515;
+  padding: 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  width: 5rem;
+  cursor: pointer;
+  border-radius: 1em;
+  opacity: 100%;
+}
 
-  a.dropdown .dropElement {
-    display: none;
-  }
+#toggleButton #modeIcon{
+  filter: brightness(0%);
+  cursor: pointer;
+}
 
-  a.dropdown:hover .dropElement {
-    display: block;
-  }
-      
-  .active {
-    background-color: #ffa500;
-  }  
+#toggleButton.light-theme #modeIcon{
+  filter: brightness(1000%);
+}
 
-  section {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-  }
+#toggleButton.light-theme {
+  background-color: #151515;
+  color: whitesmoke;
+}
 
-  #section1 {
-    padding-top: 25vh;
-    padding-bottom: 75vh;
-  }
+#toggleButton:hover {
+  opacity: 90%;
+}
 
-  #section2 {
-    padding-top: 50vh;
-    padding-bottom: 50vh;
-  }
+#arrowTriangle {
+  fill: whitesmoke;
+  stroke: whitesmoke;
+  opacity: 100%;
+}
 
-  #section3 {
-    padding-top: 25vh;
-    padding-bottom: 75vh;
-  }
+#arrowTriangle.light-theme {
+  fill: #151515;
+  stroke: #151515;
+}
 
-  #toggleButton {
-    background-color: whitesmoke;
-    border: none;
-    color: #151515;
-    padding: 1.25rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    width: 5rem;
-    cursor: pointer;
-    border-radius: 1em;
-    opacity: 100%;
-  }
-
-  #toggleButton #modeIcon{
-    filter: brightness(0%);
-    cursor: pointer;
-  }
-
-  #toggleButton.light-theme #modeIcon{
-    filter: brightness(1000%);
-  }
-
-  #toggleButton.light-theme {
-    background-color: #151515;
-    color: whitesmoke;
-  }
-
-  #toggleButton:hover {
-    opacity: 90%;
-  }
-
-  #arrowTriangle {
-    fill: whitesmoke;
-    stroke: whitesmoke;
-    opacity: 100%;
-  }
-
-  #arrowTriangle.light-theme {
-    fill: #151515;
-    stroke: #151515;
-  }
-
-  #arrowTriangle:hover {
-    opacity: 90%;
-  }
+#arrowTriangle:hover {
+  opacity: 90%;
+}
