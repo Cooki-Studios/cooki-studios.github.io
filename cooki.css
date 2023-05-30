@@ -19,9 +19,9 @@ body {
   color: #151515;
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
+.dark {
+  background-color: #151515;
+  color: whitesmoke;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -51,9 +51,12 @@ ul {
   list-style-type: none;
   margin: auto;
   padding: 0;
-  overflow-y: hidden;
   overflow-x: scroll;
-  scrollbar-width: none;
+  overflow-y: hidden;
+  display: flex;
+  grid-auto-flow: column;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
   background-color: #33333390;
   position: -webkit-sticky;
   position: sticky;
@@ -65,26 +68,38 @@ ul {
   max-height: 7.5vmax;
 }
 
-ul::-webkit-scrollbar {
-  display: none;
-}
-
-li {
-  float: left;
+ul::-webkit-scrollbar { 
+  display: none;  /* Safari and Chrome */
 }
 
 li a {
   display: flex;
   align-items: center;
   color: white;
-  text-align: center;
-  height: 2rem;
+  height: 2.5vh;
   padding: 1rem;
-  opacity: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  li a {
+    font-size: small;
+  }
+
+  li a img {
+    width: 1.5rem;
+  }
 }
 
 li a:hover:not(.active) {
   opacity: 75%;
+}
+
+ul li.right{
+  margin-left: auto;
+}
+
+ul li:not(:last-child){
+  border-right: 0.15rem solid rgba(245, 245, 245, 0.05);
 }
 
 a:hover:not(.active) {

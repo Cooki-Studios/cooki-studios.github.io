@@ -22,7 +22,7 @@ function addNavLink(text, active, right, image, url) {
     }
 
     if (right) {
-        navLink.style.cssFloat = "right";
+        navLink.classList.add("right");
     }
 
     if (image != false) {
