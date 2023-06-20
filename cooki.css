@@ -3,7 +3,6 @@ html {
 }
 
 body {
-  background-color: #151515;
   margin: 0;
   user-select: none;
   -ms-user-select: none;
@@ -11,40 +10,64 @@ body {
   -webkit-user-select: none;
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
-  color:whitesmoke;
 }
 
-.light {
+body.light {
+  background-color: whitesmoke;
+}
+
+body.dark {
+  background-color: #151515;
+}
+
+path.light {
+  fill: #151515;
+  stroke: #151515;
+}
+
+path.dark {
+  fill: whitesmoke;
+  stroke: whitesmoke;
+}
+
+h1.light,h2.light,h3.light,h4.light,h5.light,h6,p.light,footer.light {
   background-color: whitesmoke;
   color: #151515;
 }
 
-.dark {
+h1.dark,h2.dark,h3.dark,h4.dark,h5.dark,h6.dark,p.dark,footer.dark {
   background-color: #151515;
   color: whitesmoke;
+}
+
+button.light {
+  background-color: #151515;
+  color: whitesmoke;
+}
+
+button.dark {
+  background-color: whitesmoke;
+  color: #151515;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Rubik', sans-serif;
   font-weight: 600;
+  color: whitesmoke;
 }
 
-p, ul, li, a {
+p, ul, li, a, footer {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
-h1, h2, h3, h4, h5, h6, ul, li, li a p {
+h1, h2, h3, h4, h5, h6, ul, li, li a p, footer {
   text-decoration: none;
 }
 
 a {
   text-decoration: none;
   color:whitesmoke;
-}
-
-h1, h2, h3, h4, h5, h6, p {
-  cursor: text;
 }
   
 ul {
@@ -146,9 +169,7 @@ section {
 }
 
 #toggleButton {
-  background-color: whitesmoke;
   border: none;
-  color: #151515;
   padding: 1.25rem;
   text-align: center;
   text-decoration: none;
@@ -160,18 +181,14 @@ section {
   opacity: 100%;
 }
 
-#toggleButton #modeIcon{
+#toggleButton.dark #modeIcon{
   filter: brightness(0%);
   cursor: pointer;
 }
 
-#toggleButton.light-theme #modeIcon{
+#toggleButton.light #modeIcon{
   filter: brightness(1000%);
-}
-
-#toggleButton.light-theme {
-  background-color: #151515;
-  color: whitesmoke;
+  cursor: pointer;
 }
 
 #toggleButton:hover {
@@ -179,16 +196,18 @@ section {
 }
 
 #arrowTriangle {
-  fill: whitesmoke;
-  stroke: whitesmoke;
   opacity: 100%;
-}
-
-#arrowTriangle.light-theme {
-  fill: #151515;
-  stroke: #151515;
 }
 
 #arrowTriangle:hover {
   opacity: 90%;
+}
+
+footer {
+  position: fixed;
+  border-radius: 3rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.25rem;
+  top: calc(100vh - 2rem);
 }

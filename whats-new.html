@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -127,7 +128,7 @@
 						var html =
 							`<li>
 								<span class="message"><span id="new-message">New!</span> ${sanitize(truncate(record.commit.message))}</span><br>
-								by <span class="author"><a target="_blank" href="${sanitize(record.author.html_url)}">${sanitize(record.commit.author.name)}</a></span> at <span class="date">${sanitize(formatDate(record.commit.author.date))}</span>
+								by <span class="author"><a target="_blank" href="${sanitize(record.author.html_url)}">${sanitize(record.author.login)}</a></span> at <span class="date">${sanitize(formatDate(record.commit.author.date))}</span>
 							</li>`;
 						return html;
 					}).join('')}

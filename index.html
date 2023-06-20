@@ -19,37 +19,25 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
       <script>
-        var theme = true;
-        var darkList;
-        var lightList;
-
         function toggleMode() {
-          theme = !theme
-
+          var theme = document.body.classList.contains("dark");
+          var elementsToToggle = document.querySelectorAll(".dark, .light");
+        
           if (theme) {
-            document.getElementById("modeIcon").innerText = '☀️';
-          } else {
             document.getElementById("modeIcon").innerText = '🌙';
+          } else {
+            document.getElementById("modeIcon").innerText = '☀️';
           }
-
-          darkList = document.body.getElementsByClassName("dark");
-          lightList = document.body.getElementsByClassName("light");
-
-          for (let i = 0; i < darkList.length; i++) {
-            darkList[i].classList.remove("dark");
-          }
-
-          for (let i = 0; i < lightList.length; i++) {
-            lightList[i].classList.add("dark");
-          }
-
-          document.getElementById("toggleButton").classList.toggle("light");
-          document.getElementById("arrowTriangle").classList.toggle("light");
+        
+          elementsToToggle.forEach(function(element) {
+            element.classList.toggle("dark");
+            element.classList.toggle("light");
+          });
         }
-      </script>
+      </script>                           
       <link rel="stylesheet" href="cooki.css">
   </head>
-  <body>
+  <body class="dark">
     <script src="navbar.js"></script>
     <script>
       addNavLink("Home", true, false, false);
@@ -62,12 +50,12 @@
     </script>
     <section id="section1" style="background: url(img/LayeredWaves.svg) no-repeat center center; background-size: cover; height: 100%; overflow: hidden;">
       <h1 class="dark">Warning!</h1>
-      <h3>This website is still in development.</h3>
+      <h3 class="dark">This website is still in development.</h3>
       <button id="toggleButton" class="dark" onclick="toggleMode()"><p id="modeIcon">☀️</p></button>
       <a href="#section2" style="position: relative; top: 10rem;">
         <svg width='49.328125px' height='52.400390625px' direction='ltr' xmlns='http://www.w3.org/2000/svg' version='1.1'>
           <g fill-rule='nonzero' transform='scale(1,-1) translate(0,-52.400390625)'>
-          <path id="arrowTriangle" fill='white' stroke='white' fill-opacity='1.0' stroke-width='1.0' d='
+          <path id="arrowTriangle" class="dark" stroke='white' fill-opacity='1.0' stroke-width='1.0' d='
               M 24.6640625,5.37109375
               C 36.115234375,5.37109375 45.482421875,14.73828125 45.482421875,26.2109375
               C 45.482421875,37.662109375 36.115234375,47.029296875 24.6640625,47.029296875
@@ -93,8 +81,8 @@
     <section id="section3" style="background: url(img/LayeredPeaks.svg) no-repeat center center; background-size: cover; height: 100%; overflow: hidden;">
       
     </section>
-    <footer>
-      <p>Cooki Studios</p>
+    <footer class="dark">
+      Cooki Studios
     </footer>
   </body>
 </html>
