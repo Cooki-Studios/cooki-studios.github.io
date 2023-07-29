@@ -37,22 +37,14 @@
       </script>                           
       <link rel="stylesheet" href="cooki.css">
   </head>
-  <body class="dark">
+  <body class="dark" onload="if(screen.width<=600){document.querySelector('ul li:first-child').style.display='block';document.querySelector('ul li:first-child a').style.display='block'}else{document.querySelector('ul li:first-child').style.display='none';document.querySelector('ul li:first-child a').style.display='none'}" onresize="if(screen.width<=600){document.querySelector('ul li:first-child').style.display='block';document.querySelector('ul li:first-child a').style.display='block'}else{document.querySelector('ul li:first-child').style.display='none';document.querySelector('ul li:first-child a').style.display='none'}">
     <script src="navbar.js"></script>
-    <script>
-      addNavLink("Home", true, false, false);
-      addNavLink("Games", false, false, false, "https://cooki-studios.github.io/games");
-      addNavLink("Tiles", false, false, false, "https://cooki-studios.github.io/tiles");
-      addNavLink("Wallpapers (PRE-ALPHA)", false, false, false, "https://cooki-studios.github.io/wallpapers?bg-color=151515&fill-style=ffa500");
-      addNavLink("Random Stuff", false, false, false, "https://cooki-studios.github.io/random-stuff");
-      addNavLink(false, false, true, "https://cooki-studios.github.io/img/WhatsNew.svg", "https://cooki-studios.github.io/whats-new");
-      document.body.appendChild(nav);
-    </script>
     <section id="section1" style="background: url(img/LayeredWaves.svg) no-repeat center center; background-size: cover; height: 100%; overflow: hidden;">
       <h1 class="dark">Warning!</h1>
       <h3 class="dark">This website is still in development.</h3>
-      <button id="toggleButton" class="dark" onclick="toggleMode()"><p id="modeIcon">☀️</p></button>
-      <a href="#section2" style="position: relative; top: 10rem;">
+      <p class="dark">But there is still a lot to do...</p>
+      <p class="dark">This website is here to showcase the projects of Cooki Studios.</p>
+      <a href="#section2" style="position: relative; top: 1rem;">
         <svg width='49.328125px' height='52.400390625px' direction='ltr' xmlns='http://www.w3.org/2000/svg' version='1.1'>
           <g fill-rule='nonzero' transform='scale(1,-1) translate(0,-52.400390625)'>
           <path id="arrowTriangle" class="dark" stroke='white' fill-opacity='1.0' stroke-width='1.0' d='
@@ -71,7 +63,7 @@
               Z
           ' />
           </g>
-          </svg>
+        </svg>
       </a>
     </section>
     <section id="section2" style="background-color: #ffa500;">
