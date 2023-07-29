@@ -150,7 +150,7 @@ li:has(.dropdown-content):nth-child(6):hover a {
 @media only screen and (max-width: 600px) {
   ul {
     width: 5rem;
-    margin-left: 85%;
+    margin-left: 83%;
   }
 
   ul li {

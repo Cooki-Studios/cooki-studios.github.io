@@ -30,7 +30,7 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
         mobileNavLinkContent = document.createElement("a");
 
         if (url != null && url != false) {
-            if (url == window.location.href) {
+            if (url == window.location.href+"/") {
                 mobileNavLinkContent.classList.add("active");
             } else {
                 mobileNavLinkContent.setAttribute("href", url);
@@ -89,7 +89,7 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
         navLinkContent = document.createElement("a");
 
         if (url != null && url != false) {
-            if (url == window.location.href) {
+            if (url == window.location.href+"/") {
                 navLinkContent.classList.add("active");
             } else {
                 navLinkContent.setAttribute("href", url);
@@ -164,7 +164,7 @@ addNavLink("Games", false, false, "https://cooki-studios.github.io/games");
 addNavLink("Tiles", false, false, "https://cooki-studios.github.io/tiles", false, false, [{"text":"2D (BETA)","url":"https://cooki-studios.github.io/tiles/2d/beta"},{"text":"3D (ALPHA)","url":"https://cooki-studios.github.io/tiles/3d/alpha"}]);
 addNavLink("Wallpapers (PRE-ALPHA)", false, false, "https://cooki-studios.github.io/wallpapers?bg-color=151515&fill-style=ffa500");
 addNavLink("Random Stuff", false, false, "https://cooki-studios.github.io/random-stuff", false, false, [{"text":"ChatGPT Cooki Clicker", "url":"https://cooki-studios.github.io/random-stuff/gptcookiclick"}]);
-addNavLink("<p id='modeIcon' class='white'>☀️</p>", true, false, false, false, toggleMode, [{"text":"<p class='white'>🖥</p>"}]);
+addNavLink("<p id='modeIcon' class='white'>☀️</p>", true, false, false, false, toggleMode, [{"text":"<p class='white' onclick=>🖥</p>"}]);
 addNavLink(false, true, "https://cooki-studios.github.io/img/WhatsNew.svg", "https://cooki-studios.github.io/whats-new");
 
 document.body.appendChild(nav);
