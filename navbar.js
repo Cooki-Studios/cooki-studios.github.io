@@ -30,7 +30,7 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
         mobileNavLinkContent = document.createElement("a");
 
         if (url != null && url != false) {
-            if (url == window.location.href+"/") {
+            if (url+"/" == window.location.href) {
                 mobileNavLinkContent.classList.add("active");
             } else {
                 mobileNavLinkContent.setAttribute("href", url);
@@ -89,7 +89,7 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
         navLinkContent = document.createElement("a");
 
         if (url != null && url != false) {
-            if (url == window.location.href+"/") {
+            if (url+"/" == window.location.href+"/") {
                 navLinkContent.classList.add("active");
             } else {
                 navLinkContent.setAttribute("href", url);
