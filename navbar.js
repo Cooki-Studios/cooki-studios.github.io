@@ -20,6 +20,22 @@ var mobileNavLinkContentImg;
 
 console.log(window.location);
 
+function toggleMode() {
+    var theme = document.body.classList.contains("dark");
+    var elementsToToggle = document.querySelectorAll(".dark, .light");
+  
+    if (theme) {
+      document.getElementById("modeIcon").innerText = '🌙';
+    } else {
+      document.getElementById("modeIcon").innerText = '☀️';
+    }
+  
+    elementsToToggle.forEach(function(element) {
+      element.classList.toggle("dark");
+      element.classList.toggle("light");
+    });
+  }
+
 function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) {
     if (mobile) {
         mobileNavLink = document.createElement("li");
@@ -89,7 +105,7 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
         navLinkContent = document.createElement("a");
 
         if (url != null && url != false) {
-            if (url+"/" == window.location.href+"/") {
+            if (url+"/" == window.location.href) {
                 navLinkContent.classList.add("active");
             } else {
                 navLinkContent.setAttribute("href", url);
