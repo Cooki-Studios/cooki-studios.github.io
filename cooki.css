@@ -249,7 +249,7 @@ a:hover:not(.active) {
   top: 5rem;
   width: 100vw;
   height: fit-content;
-  overflow:visible;
+  overflow: scroll;
 }
 
 #mobileNav a {
