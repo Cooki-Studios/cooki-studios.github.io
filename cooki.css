@@ -38,6 +38,11 @@ h1.light,h2.light,h3.light,h4.light,h5.light,h6,p.light,footer.light {
 h1.dark,h2.dark,h3.dark,h4.dark,h5.dark,h6.dark,p.dark,footer.dark {
   background-color: #151515;
   color: whitesmoke;
+  border-radius: 0.25rem;
+}
+
+.margin {
+  margin: 0;
 }
 
 button.light {
@@ -285,21 +290,6 @@ section {
   flex-direction: column;
   align-content: center;
   align-items: center;
-}
-
-#section1 {
-  padding-top: 25vh;
-  padding-bottom: 75vh;
-}
-
-#section2 {
-  padding-top: 50vh;
-  padding-bottom: 50vh;
-}
-
-#section3 {
-  padding-top: 25vh;
-  padding-bottom: 75vh;
 }
 
 .black {
