@@ -293,12 +293,12 @@ section {
 }
 
 .black {
-  filter: brightness(0%);
+  filter: grayscale(100%) brightness(0%);
   cursor: pointer;
 }
 
 .white {
-  filter: brightness(1000%);
+  filter: grayscale(100%) brightness(1000%);
   cursor: pointer;
 }
 
