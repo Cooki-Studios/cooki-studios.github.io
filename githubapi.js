@@ -10,8 +10,9 @@ async function ghRepoDate(){
             const [y, m, d] = dtStr[0].split(/-/);
             const [h, mm, s] = dtStr[1].split("Z")[0].split(/:/);
             date = new Date(y.split(/"/)[1], m - 1, d, h, mm, s);
-            dist = formatDistance(date, new Date(), { addSuffix: true });
-            return dist;
+            return date;
+            // dist = formatDistance(date, new Date(), { addSuffix: true });
+            // return dist;
         })
         .catch(error => {
             console.error(error);
