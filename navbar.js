@@ -176,7 +176,7 @@ mobileNav.id = "mobileNav";
 
 addNavLink("<img src='img/menu.svg'>", false, false, false, true, toggleMobileNav);
 addNavLink("Home", false, false, "https://cooki-studios.github.io");
-addNavLink("Games", false, false, "https://cooki-studios.github.io/games");
+addNavLink("Games", false, false, "https://cooki-studios.github.io/games", false, false, [{"text":"Factorised", "url":"https://cooki-studios.github.io/games/factorised"});
 addNavLink("Tiles", false, false, "https://cooki-studios.github.io/tiles", false, false, [{"text":"2D (BETA)","url":"https://cooki-studios.github.io/tiles/2d/beta"},{"text":"3D (ALPHA)","url":"https://cooki-studios.github.io/tiles/3d/alpha"}]);
 addNavLink("Wallpapers (PRE-ALPHA)", false, false, "https://cooki-studios.github.io/wallpapers?bg-color=151515&fill-style=ffa500");
 addNavLink("Random Stuff", false, false, "https://cooki-studios.github.io/random-stuff", false, false, [{"text":"Pixel Font", "url":"https://cooki-studios.github.io/random-stuff/fonts/pixel/Cooki's%20Pixels.ttf"},{"text":"ChatGPT Cooki Clicker", "url":"https://cooki-studios.github.io/random-stuff/gptcookiclick"}]);
