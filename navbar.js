@@ -63,6 +63,7 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
             mobileNavLinkContentImg.style.margin = 0;
             mobileNavLinkContentImg.style.padding = 0;
             mobileNavLinkContentImg.style.height = "2rem";
+            mobileNavLinkContentImg.style.width = "2rem";
 
             mobileNavLinkContent.appendChild(mobileNavLinkContentImg);
         }
@@ -122,6 +123,7 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
             navLinkContentImg.style.margin = 0;
             navLinkContentImg.style.padding = 0;
             navLinkContentImg.style.height = "2rem";
+            navLinkContentImg.style.width = "2rem";
 
             navLinkContent.appendChild(navLinkContentImg);
         }
