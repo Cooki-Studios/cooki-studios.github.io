@@ -34,7 +34,7 @@ function toggleMode() {
     });
   }
 
-function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile, alt) {
+function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile, alt, label) {
     if (mobile) {
         mobileNavLink = document.createElement("li");
         mobileNavLinkDiv = document.createElement("div");
@@ -52,6 +52,10 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile, 
 
             if (alt != null && alt != false) {
                 mobileNavLinkContent.alt = alt;  
+            }
+
+            if (label != null && label != false) {
+                mobileNavLinkContent.ariaLabel = label;
             }
         }
         
@@ -91,18 +95,6 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile, 
 
         mobileNavLink.appendChild(mobileNavLinkDiv);
         mobileNavLinkDiv.appendChild(mobileNavLinkContent);
-        
-        if (dropdown != undefined && dropdown != false) {
-            for (let i = 0; i < dropdown.length; i++) {
-                mobileNavLinkContentLink = document.createElement("a");
-                mobileNavLinkContentLink.innerHTML = dropdown[i].text;
-                if (dropdown[i].url != undefined) {
-                    mobileNavLinkContentLink.setAttribute("href", dropdown[i].url);
-                }
-                mobileNavLinkDiv.appendChild(mobileNavLinkContentDiv);
-                mobileNavLinkContentDiv.appendChild(mobileNavLinkContentLink);
-            }
-        }
     } else {
         navLink = document.createElement("li");
         navLinkDiv = document.createElement("div");
@@ -120,6 +112,10 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile, 
 
             if (alt != null && alt != false) {
                 navLinkContent.alt = alt;
+            }
+
+            if (label != null && label != false) {
+                navLinkContent.ariaLabel = label;
             }
         }
         
@@ -164,9 +160,15 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile, 
             for (let i = 0; i < dropdown.length; i++) {
                 navLinkContentLink = document.createElement("a");
                 navLinkContentLink.innerHTML = dropdown[i].text;
+
                 if (dropdown[i].url != undefined) {
                     navLinkContentLink.setAttribute("href", dropdown[i].url);
                 }
+
+                if (dropdown[i].label != null && dropdown[i].label != false) {
+                    navLinkContentLink.ariaLabel = dropdown[i].label;
+                }
+
                 navLinkDiv.appendChild(navLinkContentDiv);
                 navLinkContentDiv.appendChild(navLinkContentLink);
             }

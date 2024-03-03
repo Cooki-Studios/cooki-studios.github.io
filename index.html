@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <link rel="icon" href="img/CookiWeb.png" type="image/png">
   <title>Cooki Studios</title>
   <head>
@@ -14,7 +14,7 @@
   </head>
   <body class="dark" onload="if(screen.width<=600){document.querySelector('ul li:first-child').style.display='block';document.querySelector('ul li:first-child a').style.display='block'}else{document.querySelector('ul li:first-child').style.display='none';document.querySelector('ul li:first-child a').style.display='none'}" onresize="if(screen.width<=600){document.querySelector('ul li:first-child').style.display='block';document.querySelector('ul li:first-child a').style.display='block'}else{document.querySelector('ul li:first-child').style.display='none';document.querySelector('ul li:first-child a').style.display='none'}">
     <script src="navbar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/date-fns@3.3.1/index.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/date-fns@3.3.1/index.min.js"></script> -->
     <script type="module" src="githubapi.js"></script>
     <section id="section1" style="background: no-repeat url(img/LayeredWaves.svg); background-size: 100%; background-position: 0 100%; overflow: hidden; height: 80vh; padding-top: 25vh;">
       <h3 class="dark margin">This website is here to showcase the projects of</h3>
@@ -22,7 +22,7 @@
       <p class="dark">Currently in the works:</p>
       <p class="dark"><a href="/tiles/2d/beta"><b>Tiles 2D</b></a>, a simple yet powerful graphic design, animation and pixel art editor,</a></p>
       <p class="dark margin" onload="this.innerText = 'last updated '+await ghRepoDate('Cooki-Studios/tiles')+' ago'"></p>
-      <a href="#section2" style="position: relative; top: 1rem;">
+      <a href="#section2" style="position: relative; top: 1rem;" aria-label="Scroll down to the next section">
         <svg width='49.328125px' height='52.400390625px' direction='ltr' xmlns='http://www.w3.org/2000/svg' version='1.1'>
           <g fill-rule='nonzero' transform='scale(1,-1) translate(0,-52.400390625)'>
           <path id="arrowTriangle" class="dark" stroke='white' fill-opacity='1.0' stroke-width='1.0' d='

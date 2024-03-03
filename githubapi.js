@@ -1,4 +1,4 @@
-// import { formatDistance } from 'date-fns'
+// import { formatDistance } from 'date-fns';
 
 async function ghRepoDate(){
     let data = await fetch("https://api.github.com/repos/Cooki-Studios/tiles/commits")

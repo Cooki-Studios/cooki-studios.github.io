@@ -209,6 +209,7 @@ a:hover:not(.active) {
 .active {
   background-color: #ffa500;
   cursor: default;
+  color: #151515;
 }
 
 .dropdown {
