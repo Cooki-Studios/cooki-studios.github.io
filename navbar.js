@@ -18,8 +18,6 @@ var mobileNavLinkContentDiv;
 var mobileNavLinkContentLink;
 var mobileNavLinkContentImg;
 
-console.log(window.location);
-
 function toggleMode() {
     var theme = document.body.classList.contains("dark");
     var elementsToToggle = document.querySelectorAll(".dark, .light");
@@ -36,7 +34,7 @@ function toggleMode() {
     });
   }
 
-function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) {
+function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile, alt) {
     if (mobile) {
         mobileNavLink = document.createElement("li");
         mobileNavLinkDiv = document.createElement("div");
@@ -51,6 +49,10 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
             } else {
                 mobileNavLinkContent.setAttribute("href", url);
             }
+
+            if (alt != null && alt != false) {
+                mobileNavLinkContent.alt = alt;  
+            }
         }
         
         if (text != false) {
@@ -64,6 +66,10 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
             mobileNavLinkContentImg.style.padding = 0;
             mobileNavLinkContentImg.style.height = "2rem";
             mobileNavLinkContentImg.style.width = "2rem";
+
+            if (alt != null && alt != false) {
+                mobileNavLinkContentImg.alt = alt;
+            }
 
             mobileNavLinkContent.appendChild(mobileNavLinkContentImg);
         }
@@ -111,6 +117,10 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
             } else {
                 navLinkContent.setAttribute("href", url);
             }
+
+            if (alt != null && alt != false) {
+                navLinkContent.alt = alt;
+            }
         }
         
         if (text != false) {
@@ -124,6 +134,10 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile) 
             navLinkContentImg.style.padding = 0;
             navLinkContentImg.style.height = "2rem";
             navLinkContentImg.style.width = "2rem";
+
+            if (alt != null && alt != false) {
+                navLinkContentImg.alt = alt;
+            }
 
             navLinkContent.appendChild(navLinkContentImg);
         }
@@ -177,22 +191,22 @@ const mobileNav = document.createElement("ul");
 mobileNav.id = "mobileNav";
 
 addNavLink("<img src='img/menu.svg'>", false, false, false, true, toggleMobileNav);
-addNavLink("Home", false, false, "https://cooki-studios.github.io");
-addNavLink("Games", false, false, "https://cooki-studios.github.io/games", false, false, [{"text":"Factorised", "url":"https://cooki-studios.github.io/games/factorised"}]);
-addNavLink("Tiles", false, false, "https://cooki-studios.github.io/tiles", false, false, [{"text":"2D (BETA)","url":"https://cooki-studios.github.io/tiles/2d/beta"},{"text":"3D (ALPHA)","url":"https://cooki-studios.github.io/tiles/3d/alpha"}]);
-addNavLink("Wallpapers (PRE-ALPHA)", false, false, "https://cooki-studios.github.io/wallpapers?bg-color=151515&fill-style=ffa500");
-addNavLink("Random Stuff", false, false, "https://cooki-studios.github.io/random-stuff", false, false, [{"text":"Pixel Font", "url":"https://cooki-studios.github.io/random-stuff/fonts/pixel/Cooki's%20Pixels.ttf"},{"text":"ChatGPT Cooki Clicker", "url":"https://cooki-studios.github.io/random-stuff/gptcookiclick"}]);
-addNavLink("<p id='modeIcon' class='white'>☀️</p>", true, false, false, false, toggleMode, [{"text":"<p class='white' onclick=>🖥</p>"}]);
-addNavLink(false, true, "https://cooki-studios.github.io/img/WhatsNew.svg", "https://cooki-studios.github.io/whats-new");
+addNavLink("Home", false, false, "https://cookistudios.com");
+addNavLink("Games", false, false, "https://cookistudios.com/games", false, false, [{"text":"Factorised", "url":"https://cookistudios.com/games/factorised"}]);
+addNavLink("Tiles", false, false, "https://cookistudios.com/tiles", false, false, [{"text":"2D (BETA)","url":"https://cookistudios.com/tiles/2d/beta"},{"text":"3D (ALPHA)","url":"https://cookistudios.com/tiles/3d/alpha"}]);
+addNavLink("Wallpapers (PRE-ALPHA)", false, false, "https://cookistudios.com/wallpapers?bg-color=151515&fill-style=ffa500");
+addNavLink("Random Stuff", false, false, "https://cookistudios.com/random-stuff", false, false, [{"text":"Pixel Font", "url":"https://cookistudios.com/random-stuff/fonts/pixel/Cooki's%20Pixels.ttf"},{"text":"ChatGPT Cooki Clicker", "url":"https://cookistudios.com/random-stuff/gptcookiclick"}]);
+addNavLink("<p id='modeIcon' class='white'>☀️</p>", true, false, false, false, toggleMode, [{"text":"<p class='white' onclick=>🖥</p>"}], false, "Switch Theme");
+addNavLink(false, true, "https://cookistudios.com/img/WhatsNew.svg", "https://cookistudios.com/whats-new", false, false, false, false, "What's New?");
 
 document.body.appendChild(nav);
 
-addNavLink("Home", false, false, "https://cooki-studios.github.io", false , false, false, true);
-addNavLink("Games", false, false, "https://cooki-studios.github.io/games", false, false , false, true);
-addNavLink("Tiles", false, false, "https://cooki-studios.github.io/tiles", false, false, false, true);
-addNavLink("Wallpapers (PRE-ALPHA)", false, false, "https://cooki-studios.github.io/wallpapers?bg-color=151515&fill-style=ffa500", false , false, false, true);
-addNavLink("Random Stuff", false, false, "https://cooki-studios.github.io/random-stuff", false, false, false, true);
+addNavLink("Home", false, false, "https://cookistudios.com", false , false, false, true);
+addNavLink("Games", false, false, "https://cookistudios.com/games", false, false , false, true);
+addNavLink("Tiles", false, false, "https://cookistudios.com/tiles", false, false, false, true);
+addNavLink("Wallpapers (PRE-ALPHA)", false, false, "https://cookistudios.com/wallpapers?bg-color=151515&fill-style=ffa500", false , false, false, true);
+addNavLink("Random Stuff", false, false, "https://cookistudios.com/random-stuff", false, false, false, true);
 addNavLink("<p id='modeIcon' class='white'>☀️</p>", true, false, false, false, toggleMode, false, true);
-addNavLink(false, true, "https://cooki-studios.github.io/img/WhatsNew.svg", "https://cooki-studios.github.io/whats-new", false, false, false, true);
+addNavLink(false, true, "https://cookistudios.com/img/WhatsNew.svg", "https://cookistudios.com/whats-new", false, false, false, true);
 
 document.body.appendChild(mobileNav);
