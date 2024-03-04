@@ -192,7 +192,7 @@ const nav = document.createElement("ul");
 const mobileNav = document.createElement("ul");
 mobileNav.id = "mobileNav";
 
-addNavLink("<img src='img/menu.svg'>", false, false, false, true, toggleMobileNav);
+addNavLink("<img src='img/menu.svg'>", false, false, false, true, toggleMobileNav, false, false, false, "Open menu");
 addNavLink("Home", false, false, "https://cookistudios.com");
 addNavLink("Games", false, false, "https://cookistudios.com/games", false, false, [{"text":"Factorised", "url":"https://cookistudios.com/games/factorised"}]);
 addNavLink("Tiles", false, false, "https://cookistudios.com/tiles", false, false, [{"text":"2D (BETA)","url":"https://cookistudios.com/tiles/2d/beta"},{"text":"3D (ALPHA)","url":"https://cookistudios.com/tiles/3d/alpha"}]);
