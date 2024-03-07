@@ -46,7 +46,7 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile, 
         if (url != null && url != false) {
             if (url+"/" == window.location.href) {
                 mobileNavLinkContent.classList.add("active");
-                mobileNavLinkContent.setAttribute("disabled");
+                mobileNavLinkContent.setAttribute("disabled", true);
             } else {
                 mobileNavLinkContent.setAttribute("href", url);
             }
@@ -107,7 +107,7 @@ function addNavLink(text, right, image, url, hidden, onclick, dropdown, mobile, 
         if (url != null && url != false) {
             if (url+"/" == window.location.href) {
                 navLinkContent.classList.add("active");
-                navLinkContent.setAttribute("disabled");
+                navLinkContent.setAttribute("disabled", true);
             } else {
                 navLinkContent.setAttribute("href", url);
             }
